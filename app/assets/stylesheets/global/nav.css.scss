@@ -1,0 +1,19 @@
+nav {
+  background: #f2f2f2;
+  background: -moz-linear-gradient(top, #fff, #e6e6e6);
+  background: -ms-linear-gradient(top, #fff, #e6e6e6);
+  background: -o-linear-gradient(top, #fff, #e6e6e6);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#e6e6e6));
+  background: -webkit-linear-gradient(top, #fff, #e6e6e6);
+  background: linear-gradient(top, #fff, #e6e6e6);
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  height: 36px;
+}
+nav ul li {
+  float: left;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 36px;
+  margin: 0 20px;
+}

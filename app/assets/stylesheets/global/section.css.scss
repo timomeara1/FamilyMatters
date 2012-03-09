@@ -1,0 +1,75 @@
+section {
+  border: 1px solid blue;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  float: right;
+  margin: 19px 0px 19px 0;
+  width: 652px;
+}
+section table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+section table th {
+  background: #f2f2f2;
+  background: -moz-linear-gradient(top, #fff, #e6e6e6);
+  background: -ms-linear-gradient(top, #fff, #e6e6e6);
+  background: -o-linear-gradient(top, #fff, #e6e6e6);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#e6e6e6));
+  background: -webkit-linear-gradient(top, #fff, #e6e6e6);
+  background: linear-gradient(top, #fff, #e6e6e6);
+  border-bottom: 1px solid #ccc;
+  -moz-border-radius: 5px 5px 0 0;
+  -o-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 12px;
+}
+section table td {
+  background: #fff;
+  background: -moz-linear-gradient(bottom, #fff 0%, #f2f2f2 120%);
+  background: -ms-linear-gradient(bottom, #fff 0%, #f2f2f2 120%);
+  background: -o-linear-gradient(bottom, #fff 0%, #f2f2f2 120%);
+  background: -webkit-gradient(linear, 0% 0%, 0% 120%, from(#fff), to(#f2f2f2));
+  background: -webkit-linear-gradient(bottom, #fff 0%, #f2f2f2 120%);
+  background: linear-gradient(bottom, #fff 0%, #f2f2f2 120%);
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #e4e4e4;
+  padding: 14px 12px;
+  text-align: center;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+section table tr:hover td {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.08);
+  -o-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+section table tr:nth-child(2) td {
+  border-top: none;
+}
+section table tr:last-child td {
+  border-bottom: none;
+  -moz-border-radius: 0 0 5px 5px;
+  -o-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+section nav {
+  border-bottom: 0;
+  line-height: 36px;
+  padding: 0 20px;
+  text-align: right;
+}

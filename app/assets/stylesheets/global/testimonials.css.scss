@@ -1,0 +1,28 @@
+#testimonials {
+  background: #f2f2f2;
+  background: -moz-linear-gradient(top, #fff, #e6e6e6);
+  background: -ms-linear-gradient(top, #fff, #e6e6e6);
+  background: -o-linear-gradient(top, #fff, #e6e6e6);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#e6e6e6));
+  background: -webkit-linear-gradient(top, #fff, #e6e6e6);
+  background: linear-gradient(top, #fff, #e6e6e6);
+  border: 1px solid #ccc;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #275b8c;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.video_placeholder
+{
+width:559px;
+height:320px;
+float: left;
+background: url("bethmalin.jpg") top left no-repeat;
+padding-left:18px;
+padding-top:18px;
+margin-right:40px;
+}

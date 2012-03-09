@@ -1,0 +1,59 @@
+<div id="show">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @mom.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @mom.email %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @mom.age %>
+</p>
+
+<p>
+  <b>Children:</b>
+  <%= @mom.children %>
+</p>
+
+<p>
+  <b>Education:</b>
+  <%= @mom.education %>
+</p>
+
+<p>
+  <b>Neighborhood:</b>
+  <%= @mom.neighborhood %>
+</p>
+
+<p>
+  <b>Favorite TV Show:</b>
+  <%= @mom.tvshow %>
+</p>
+
+<p>
+  <b>Hobbies:</b>
+  <%= @mom.hobby %>
+</p>
+
+<p>
+  <b>Pets:</b>
+  <%= @mom.pets %>
+</p>
+
+<p>
+  <b>Work:</b>
+  <%= @mom.work %>
+</p>
+
+
+<%= link_to 'Edit', edit_mom_path(@mom) %> |
+<%= link_to 'Back', moms_path %>
+
+</div>

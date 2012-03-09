@@ -1,0 +1,67 @@
+
+<header>
+  
+
+
+</header>
+
+
+<aside>
+  <div class="box">
+
+<%= form_tag '/sessions' do %>
+  
+  <p><%= label_tag :email %> 
+     <%= text_field_tag :email %></p>
+      
+  <p><%= label_tag :password %> 
+     <%= password_field_tag :password %></p>
+  
+  <p><%= submit_tag "Sign In!" %></p>
+  
+  <p><%= link_to 'Log Out', '/signout' %> |
+  <%= link_to "Sign Up!", new_mom_url %></p>
+  
+<% end %>
+</div>
+</aside>
+<section>
+<p>Search by Neighborhood</p>
+
+<%= form_tag moms_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search" %>
+  </p>
+<% end %>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Neighborhood</th>
+  </tr>
+  </thead>
+  <tbody>
+<% @moms.each do |mom| %>
+  <tr class="<%= cycle("unshaded", "shaded") %>" 
+  <tr>
+    <td><%= mom.name %></td>
+    <td><%= mom.age %></td>
+    <td><%= mom.neighborhood %></td>
+    <td><%= link_to 'Show', mom %></td>
+    <td><%= link_to 'Edit', edit_mom_path(mom) %></td>
+    <td><%= link_to 'Destroy', mom, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+<%= paginate @moms %>
+</section>
+<br />
+
+
+<div clas="clear"></div>
+
+

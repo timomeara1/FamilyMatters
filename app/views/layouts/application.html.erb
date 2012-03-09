@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Play Date</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+  <div id="container">
+
+    <header>
+      <h1><%= link_to root_url do %>Play<span>Date</span><% end %></h1>
+      <ul>Social Networking for Moms on the Go!</ul>
+     
+
+      <div class="clear"></div>
+    </header>
+    
+    <nav>
+      <ul>
+        <li><%= link_to "About Us", about_us_url %></a></li>
+        <li><%= link_to "Contact Us", contact_us_url %></a></li>
+        <li><%= link_to "Testimonials", testimonials_url %></a></li>
+        <li><%= link_to "Recipes", 'pages/contact_us'%></a></li>
+        <li><%= link_to "Activities", 'pages/contact_us'%></a></li>
+        <li><%= link_to "Surveys", 'pages/contact_us'%></a></li>
+        <li><%= link_to "Meet Ups", 'www.meetups.com'%></a></li>
+        <li><%= link_to "For Sale/Looking For", 'pages/contact_us'%></a></li>
+        
+      </ul>
+    </nav>
+    
+    <p id="notice"><%= notice %></p>
+    <%= yield %>
+    
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+@media screen and (max-width: 640px) {
+
+  /*** GLOBAL ***/
+  
+  html {
+    background: #fff;
+    padding: 0 0 20px 0;
+  }
+
+  #container {
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 0;
+    width: auto;
+  }
+
+  /*** HEADER ***/
+  
+  header {
+    border-bottom: 1px solid #cccccc;
+    padding: 20px 10px;
+  }
+  header ul {
+    margin: 22px 0 0 0;
+  }
+  header ul li {
+    line-height: 12px;
+  }
+  header ul li.btn {
+    border-left: 1px solid #cccccc;
+    margin: 0 0 0 8px;
+    padding: 0 0 0 8px;
+  }
+  header ul li.btn a {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  header ul li.btn a:hover, header ul li.btn a:focus, header ul li.btn a:active {
+    background: none;
+  }
+
+  /*** NAV ***/
+  
+  nav {
+    display: none;
+  }
+
+  /*** ASIDE ***/
+  
+  aside {
+    margin: 0;
+    width: 100%;
+  }
+  aside .box {
+    border: none;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+  aside h1 {
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    padding: 8px;
+    width: 102%;
+  }
+
+  /*** SECTION ***/
+  
+  section {
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin: 0;
+    width: 100%;
+  }
+  section table tr th {
+    padding: 8px 4px;
+  }
+  section table tr th:nth-child(5), section table tr th:nth-child(6) {
+    display: none;
+  }
+  section table tr td {
+    padding: 10px 6px;
+  }
+  section table tr td.book a {
+    padding: 2px 6px;
+  }
+  section table tr td:nth-child(5), section table tr td:nth-child(6) {
+    display: none;
+  }
+
+  /*** FORM ***/
+  
+  form input {
+    padding: 4px 6px;
+    width: 96%;
+  }
+  form li.submit input {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+}
