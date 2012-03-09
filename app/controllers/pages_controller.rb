@@ -8,4 +8,8 @@ class PagesController < ApplicationController
   def testimonials
     
   end
+  
+  def surveys
+    
+  end
 end

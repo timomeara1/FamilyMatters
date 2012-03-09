@@ -7,6 +7,10 @@ FamilyMatters::Application.routes.draw do
   get "pages/contact_us" => 'pages#contact_us', :as => :contact_us
 
   get "pages/testimonials" => 'pages#testimonials', :as => :testimonials
+  
+  get "pages/surveys" => 'pages#surveys', :as => :surveys
+  
+  
   root :to => 'moms#index'
   
  

@@ -1,6 +1,7 @@
 <div id="show">
 
 <%= form_for(@mom) do |f| %>
+
   <% if @mom.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@mom.errors.count, "error") %> prohibited this mom from being saved:</h2>
@@ -61,6 +62,17 @@
     <%= f.label :work %><br />
     <%= f.text_field :work %>
   </div>
+  
+  <div class="field">
+    <%= f.file_field :image %>
+  </div>
+
+  <div>
+    
+      <%= f.label :remote_image_url, "or image URL" %><br />
+      <%= f.text_field :remote_image_url %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
