@@ -1,8 +1,10 @@
 class Mom < ActiveRecord::Base
-  
+
   
   has_many :photos
-  
+
+
+
   has_secure_password
 
   validates :email, :password, :presence => true
@@ -10,6 +12,7 @@ class Mom < ActiveRecord::Base
   belongs_to :mom
   
   mount_uploader :image, ImageUploader
+  
   
   def self.search(search)
     if search

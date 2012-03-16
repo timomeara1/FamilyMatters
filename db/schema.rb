@@ -11,7 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+
 ActiveRecord::Schema.define(:version => 20120316185501) do
+
 
   create_table "moms", :force => true do |t|
     t.string   "name"
@@ -28,7 +30,9 @@ ActiveRecord::Schema.define(:version => 20120316185501) do
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
     t.string   "image"
+
     t.boolean  "admin"
+
   end
 
   create_table "photos", :force => true do |t|

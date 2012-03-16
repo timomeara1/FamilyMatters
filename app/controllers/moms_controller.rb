@@ -2,9 +2,9 @@ class MomsController < ApplicationController
   # GET /moms
   # GET /moms.json
   def index
-    @moms = Mom.order("neighborhood asc").page(params[:page]).per(4)
+    @moms = Mom.order("neighborhood asc").page(params[:page]).per(3)
     @moms = @moms.where('neighborhood LIKE ?', "%#{params[:search]}%")
-    @moms = @moms.limit(5)
+    @moms = @moms.limit(3)
     
 
     respond_to do |format|
