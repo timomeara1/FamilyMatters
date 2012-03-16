@@ -7,8 +7,10 @@ class SessionsController < ApplicationController
     def create
       
       @mom = Mom.find_by_email(params[:email])
+      logger.debug "MOM: #{@mom.id}"
       if @mom && @mom.authenticate(params[:password])
           session[:mom_id] = @mom.id
+          logger.debug "SESSION CREATED: #{session[:mom_id]}"
           redirect_to root_url, :notice => "Welcome" 
           
       else

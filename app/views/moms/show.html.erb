@@ -52,6 +52,9 @@
   <%= @mom.work %>
 </p>
 
+<p>
+  <%= image_tag @mom.image_url.to_s  %>
+</p>
 
 <%= link_to 'Edit', edit_mom_path(@mom) %> |
 <%= link_to 'Back', moms_path %>

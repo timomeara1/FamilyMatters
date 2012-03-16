@@ -25,7 +25,7 @@ class RecipesController < ApplicationController
   # GET /recipes/new.json
   def new
     @recipe = Recipe.new
-
+    @recipe.mom_id = session[:mom_id]
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @recipe }

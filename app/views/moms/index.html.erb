@@ -44,15 +44,19 @@
   </tr>
   </thead>
   <tbody>
+
 <% @moms.each do |mom| %>
   <tr class="<%= cycle("unshaded", "shaded") %>" 
   <tr>
-    <td><%= mom.name %></td>
+    <td><%= link_to mom.name, mom_url(mom) %></td>
     <td><%= mom.age %></td>
     <td><%= mom.neighborhood %></td>
-    <td><%= link_to 'Show', mom %></td>
+    
+  <% if session[:mom_id].present? &&   admin? %>
     <td><%= link_to 'Edit', edit_mom_path(mom) %></td>
+  
     <td><%= link_to 'Destroy', mom, confirm: 'Are you sure?', method: :delete %></td>
+  <% end %>
   </tr>
 <% end %>
 </tbody>

@@ -18,7 +18,7 @@
     <td><%= recipe.from %></td>
     <td><%= recipe.description %></td>
     <td><%= recipe.catagory %></td>
-    <td><%= recipe.mom_id %></td>
+    <td><%= recipe.mom.name %></td>
     <td><%= link_to 'Show', recipe %></td>
     <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
     <td><%= link_to 'Destroy', recipe, confirm: 'Are you sure?', method: :delete %></td>
@@ -27,5 +27,6 @@
 </table>
 
 <br />
-
+<% if session[:mom_id].present? %>
 <%= link_to 'New Recipe', new_recipe_path %>
+<% end %>

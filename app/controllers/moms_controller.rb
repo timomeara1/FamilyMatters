@@ -44,7 +44,7 @@ class MomsController < ApplicationController
   # POST /moms.json
   def create
     @mom = Mom.new(params[:mom])
-
+    @mom.admin = false
     respond_to do |format|
       if @mom.save
         format.html { redirect_to @mom, notice: 'Mom was successfully created.' }

@@ -28,8 +28,13 @@
     <%= f.text_field :catagory %>
   </div>
   <div class="field">
-    <%= f.label :mom_id %><br />
-    <%= f.number_field :mom_id %>
+    <% if session[:mom_id].present? %>
+      <%= f.hidden_field :mom_id %>
+      <%#=  %>
+    <% else %>
+      <%#= f.label :mom_id %><br />
+      <%#= f.collection_select :mom_id,  Mom.all, :id, :name %>
+    <% end %>
   </div>
   <div class="actions">
     <%= f.submit %>
