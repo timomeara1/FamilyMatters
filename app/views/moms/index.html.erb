@@ -26,7 +26,7 @@
 </div>
 </aside>
 <section>
-<p>Search by Neighborhood</p>
+<p>Search by Age or Neighborhood!</p>
 
 <%= form_tag moms_path, :method => 'get' do %>
   <p>
@@ -45,27 +45,25 @@
   </thead>
   <tbody>
 
-<% @moms.each do |mom| %>
-  <tr class="<%= cycle("unshaded", "shaded") %>" 
-  <tr>
-    <td><%= link_to mom.name, mom_url(mom) %></td>
-    <td><%= mom.age %></td>
-    <td><%= mom.neighborhood %></td>
-    
-  <% if session[:mom_id].present? &&   admin? %>
-    <td><%= link_to 'Edit', edit_mom_path(mom) %></td>
-  
-    <td><%= link_to 'Destroy', mom, confirm: 'Are you sure?', method: :delete %></td>
-  <% end %>
-  </tr>
-<% end %>
-</tbody>
-</table>
-<%= paginate @moms %>
-</section>
-<br />
+    <% @moms.each do |mom| %>
+      <tr class="<%= cycle("unshaded", "shaded") %>" 
+      <tr>
+        <td><%= link_to mom.name, mom_url(mom) %></td>
+        <td><%= mom.age %></td>
+        <td><%= mom.neighborhood %></td>
+
+      <% if session[:mom_id].present? &&   admin? %>
+        <td><%= link_to 'Edit', edit_mom_path(mom) %></td>
+
+        <td><%= link_to 'Destroy', mom, confirm: 'Are you sure?', method: :delete %></td>
+      <% end %>
+      </tr>
+    <% end %>
+    </tbody>
+    </table>
+    <%= paginate @moms %>
+    </section>
+    <br />
 
 
-<div clas="clear"></div>
-
-
+    <div class="clear"></div>

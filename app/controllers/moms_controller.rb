@@ -1,9 +1,14 @@
 class MomsController < ApplicationController
   # GET /moms
   # GET /moms.json
+  
+  # before_filter :require_login :except [:index]
+  #  before_filter :require_admin, :except => [:index]
+  
+  
   def index
     @moms = Mom.order("neighborhood asc").page(params[:page]).per(3)
-    @moms = @moms.where("neighborhood LIKE ? OR age LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%")
+    @moms = @moms.where('neighborhood LIKE ? OR age LIKE ?', "%#{params[:search]}%", "%#{params[:search]}%")
     @moms = @moms.limit(3)
     
 

@@ -1,7 +1,7 @@
 <h1>Listing recipes</h1>
 
 <table>
-  <tr>
+  <!-- <tr>
     <th>Name</th>
     <th>From</th>
     <th>Description</th>
@@ -10,18 +10,19 @@
     <th></th>
     <th></th>
     <th></th>
-  </tr>
+  </tr> -->
 
 <% @recipes.each do |recipe| %>
   <tr>
-    <td><%= recipe.name %></td>
-    <td><%= recipe.from %></td>
-    <td><%= recipe.description %></td>
-    <td><%= recipe.catagory %></td>
-    <td><%= recipe.mom.name %></td>
-    <td><%= link_to 'Show', recipe %></td>
+    <p> <strong>Name:</strong>  <%= recipe.name %></p>
+    <p> <strong>Recipe By:</strong>  <%= recipe.from %></p>
+    <p> <strong>Directions: </strong>  <%= recipe.description %></p>
+    <p> <strong>Catagory: </strong> <%= recipe.catagory %></p>
+    <p> <strong>From Mom: </strong> <%= recipe.mom.name %></p>
+  <% if session[:mom_id].present? &&   admin? %>
     <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
     <td><%= link_to 'Destroy', recipe, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
